@@ -1,0 +1,84 @@
+.cdp-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde a barra de rolagem */
+}
+
+.cdp-carousel {
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+.cdp-product {
+    flex: 0 0 auto;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px; /* Ajustar conforme necessário */
+    box-shadow: none; /* Remover linha em volta dos produtos */
+    border: none; /* Remover qualquer borda */
+}
+
+.cdp-product h3, .cdp-product p {
+    pointer-events: none;
+    margin: 0;
+}
+
+.cdp-product .button {
+    display: none;
+}
+
+.cdp-product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.slick-prev,
+.slick-next {
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #fff;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 1200px) {
+    .cdp-product {
+        width: calc((100% - 40px) / 3); /* Ajustar conforme necessário */
+    }
+}
+
+@media (max-width: 992px) {
+    .cdp-product {
+        width: calc((100% - 30px) / 2); /* Ajustar conforme necessário */
+    }
+}
+
+@media (max-width: 768px) {
+    .cdp-product {
+        width: calc(100% - 20px); /* Ajustar conforme necessário */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .cdp-product {
+        width: calc(100% - 10px); /* Ajustar conforme necessário */
+        margin: 5px 0;
+    }
+}
